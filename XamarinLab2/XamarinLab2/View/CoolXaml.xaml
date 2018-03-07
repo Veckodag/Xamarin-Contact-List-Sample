@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinLab2.CoolXaml">
+  <ContentPage.Content>
+    <ScrollView>
+        <StackLayout Padding="30">
+          <Label Text="Full Name: "></Label>
+          <Label Text="{Binding FullName}" FontSize="12" FontAttributes="Bold"></Label>
+          <Label Text="Age: "></Label>
+          <Label Text="{Binding Age}" FontSize="12" FontAttributes="Bold"></Label>
+          <Label Text="Phone Number: "></Label>
+          <Label Text="{Binding Phone}" FontSize="12" FontAttributes="Italic"></Label>
+          <Label Text="Email: "></Label>
+          <Label Text="{Binding Email}" FontSize="12" TextColor="Accent" FontAttributes="Italic"></Label>
+        </StackLayout>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

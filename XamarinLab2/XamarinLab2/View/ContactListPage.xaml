@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinLab2.ContactListPage">
+  <ContentPage.Content>
+    <StackLayout Padding="30">
+      <Label Text="Employees" FontSize="25" FontAttributes="Bold"></Label>
+      <ListView x:Name="ContactList" ItemsSource="{Binding ContactsVM}" ItemTapped="ContactList_OnItemTapped">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <ViewCell.View>
+                <Frame OutlineColor="#c5b358" BackgroundColor="#2F363D" Padding="8">
+                  <StackLayout Spacing="0">
+                    <StackLayout Orientation="Horizontal">
+                      <Label Text="{Binding FullName}" FontSize="8" TextColor="Silver"/>
+
+                      <Label Text="{Binding Phone}" FontSize="8" YAlign="End" TextColor="Accent"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                      <Label Text="{Binding Email}" FontSize="8" TextColor="Navy"/>
+                    </StackLayout>
+                  </StackLayout>
+                </Frame>
+              </ViewCell.View>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
